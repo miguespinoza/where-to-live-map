@@ -36,11 +36,11 @@ function makeHeatmap(crimeData, rules) {
 }
 
 const defaultRules = {
-  "ALLANAMIENTO DE MORADA": 10,
-  ROBO: 10,
+  "ALLANAMIENTO DE MORADA": 100,
+  ROBO: 50,
   "SIN VIOLENCIA": 2,
-  "ABUSO SEXUAL": 10,
-  VIOLACION: 10
+  "ABUSO SEXUAL": 30,
+  VIOLACION: 100
 };
 
 const App = () => {

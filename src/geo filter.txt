@@ -1,0 +1,3 @@
+
+
+{location: {$near: {$geometry: {type: "Point" ,coordinates: [-99.1002890996 , 19.351225204 ]},$maxDistance: 1000,}}}

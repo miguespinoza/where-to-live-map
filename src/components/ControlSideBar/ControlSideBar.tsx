@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { useState, Children } from "react";
+import React, { useState } from "react";
 
 /**
  * Miguel Espinoza
@@ -9,6 +9,8 @@ import React, { useState, Children } from "react";
 const Container = styled.div<{ expanded: boolean }>`
   width: 343px;
   position: absolute;
+  display: flex;
+  flex-direction: column;
   left: ${props => (props.expanded ? "0" : "-343px")};
   transition: left 0.3s;
   height: 100vh;
@@ -30,7 +32,6 @@ const ControlSideBar: React.FC = ({ children }) => {
   return (
     <Container expanded={expanded}>
       <HandleButton onClick={() => setexpanded(!expanded)}>></HandleButton>
-      <h1>Donde quieres vivir?</h1>
       {children}
     </Container>
   );

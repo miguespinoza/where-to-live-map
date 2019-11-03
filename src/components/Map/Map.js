@@ -1,9 +1,10 @@
-import React, { useRef, useState, useEffect } from "react";
+import React from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { StaticMap } from "react-map-gl";
 import DeckGL from "@deck.gl/react";
 import styled from "styled-components";
 
+import MAPBOX_ACCESS_TOKEN from "../../configuration";
 /**
  * Miguel Espinoza
  * @miguespinoza
@@ -17,7 +18,6 @@ const initialViewState = {
   pitch: 0,
   bearing: 0
 };
-const MAPBOX_ACCESS_TOKEN = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 const Container = styled.div`
   z-index: -1;
 `;

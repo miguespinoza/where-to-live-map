@@ -17,9 +17,10 @@ const PlacesManager: React.FC<{
       <button onClick={() => setLugares((lugares: any) => [...lugares, null])}>
         Agregar Lugar
       </button>
-      {lugares.map(l => (
+      {lugares.map((lugar, i) => (
         <PlaceSearch
-          place={l}
+          key={i}
+          place={lugar}
           onClose={() => {}}
           onSelect={p =>
             setLugares((lugares: any) => {

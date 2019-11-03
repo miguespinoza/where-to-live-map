@@ -79,9 +79,10 @@ const PlaceSearch: React.FC<Props> = ({ place, onClose, onSelect }) => {
       {selectedPlace == null &&
         places &&
         places.features &&
-        places.features.map((f: any) => {
+        places.features.map((f: any, i: number) => {
           return (
             <PlaceRow
+              key={i}
               selected={false}
               onClick={() => {
                 onSelect(f);
